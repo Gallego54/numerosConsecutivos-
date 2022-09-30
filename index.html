@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="src/public/css/index.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Memoria</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <template id="dashboard">
+        <div class="container rigth-content">
+            <button id="delete" class="btn-delete">Borrar</button>
+            <button id="send" class="btn-success">Comprobar</button>
+        </div>
+    </template>
+
+
+    <template id="start">
+        <button class="btn-start">Iniciar</button>
+    </template>
+    
+
+    <template id="calc-content">
+        <div id="calc-interface" class="container">
+            <div id="calc-display" class="display-calc">
+                <number  v-for="n in numbers">{{n}} </number>
+             </div>
+     
+             <div id="calc-numbers" class="calc-numbers">
+     
+             </div>
+
+
+        </div>
+
+
+        <script>
+              setCalcContent() ;
+        </script>
+    </template>
+
+    <template id="number"><number class="display-calc big-number"></number></template>
+
+
+    
+    <script src="src/public/js/index.js"></script>
+</body>
+</html>
